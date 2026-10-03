@@ -117,4 +117,3 @@ echo
 #   ./disko/layouts/luks-btrfs.nix
 #
 # Die voegen we pas toe nadat de Disko-layout getest is.
-`

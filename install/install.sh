@@ -88,10 +88,7 @@ echo
 echo "Klaar voor Disko."
 echo
 
-# Volgende stap:
-#
-# nix run github:nix-community/disko -- \
-#   --mode disko \
-#   ./disko/layouts/luks-btrfs.nix
-#
-# Die voegen we pas toe nadat de Disko-layout getest is.
+sudo nix --extra-experimental-features "nix-command flakes" \
+run github:nix-community/disko/latest -- \
+--mode disko \
+./disko/layouts/luks-btrfs.nix

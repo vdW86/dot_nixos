@@ -59,27 +59,6 @@ fi
 
 echo
 
-read -s -p "LUKS wachtwoord: " LUKS_PASSWORD
-echo
-
-if [[ -z "${LUKS_PASSWORD}" ]]; then
-    echo
-    echo "Leeg wachtwoord is niet toegestaan."
-    exit 1
-fi
-
-read -s -p "Herhaal LUKS wachtwoord: " LUKS_PASSWORD_VERIFY
-echo
-
-if [[ "${LUKS_PASSWORD}" != "${LUKS_PASSWORD_VERIFY}" ]]; then
-    echo
-    echo "Wachtwoorden komen niet overeen."
-    exit 1
-fi
-
-echo
-echo "===================================="
-echo " Samenvatting"
 echo "===================================="
 echo
 echo "Schijf : ${DISK}"
@@ -102,7 +81,6 @@ if [[ "${FINAL_CONFIRM}" != "JA" ]]; then
 fi
 
 export DISK
-export LUKS_PASSWORD
 
 echo
 echo "Configuratie gevalideerd."

@@ -88,7 +88,7 @@ echo
 echo "Klaar voor Disko."
 echo
 
-sudo nix --extra-experimental-features "nix-command flakes" \
+sudo DISK="$DISK" nix --extra-experimental-features "nix-command flakes" \
 run github:nix-community/disko/latest -- \
 --mode disko \
 ./disko/layouts/luks-btrfs.nix

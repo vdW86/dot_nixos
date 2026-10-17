@@ -2,6 +2,9 @@
 
 set -euo pipefail
 
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+REPO_ROOT="$(dirname "$SCRIPT_DIR")"
+
 clear
 
 echo
@@ -80,15 +83,65 @@ if [[ "${FINAL_CONFIRM}" != "JA" ]]; then
     exit 1
 fi
 
-export DISK
-
 echo
-echo "Configuratie gevalideerd."
-echo
-echo "Klaar voor Disko."
+echo "Start Disko."
 echo
 
-sudo DISK="$DISK" nix --extra-experimental-features "nix-command flakes" \
-run github:nix-community/disko/latest -- \
---mode disko \
-./disko/layouts/luks-btrfs.nix
+sudo DISK="${DISK}" nix \
+  --extra-experimental-features "nix-command flakes" \
+  run github:nix-community/disko/latest -- \
+  --mode disko \
+  "${REPO_ROOT}/disko/layouts/luks-btrfs.nix"
+
+echo
+echo "===================================="
+echo " Host Selectie"
+echo "===================================="
+echo
+echo "1) vm"
+echo "2) laptop"
+echo
+
+read -rp "Kies host: " HOST_CHOICE
+
+case "${HOST_CHOICE}" in
+    1)
+        HOST="vm"
+        ;;
+    2)
+        HOST="laptop"
+        ;;
+    *)
+        echo
+        echo "Ongeldige host."
+        exit 1
+        ;;
+esac
+
+echo
+echo "===================================="
+echo " NixOS Installatie"
+echo "===================================="
+echo
+echo "Host : ${HOST}"
+echo
+
+cd "${REPO_ROOT}"
+
+sudo nixos-install \
+  --root /mnt \
+  --flake ".#${HOST}"
+
+echo
+echo "===================================="
+echo " Installatie voltooid"
+echo "===================================="
+echo
+echo "Host : ${HOST}"
+echo "Disk : ${DISK}"
+echo
+echo "Voer nu uit:"
+echo
+echo "reboot"
+echo
+

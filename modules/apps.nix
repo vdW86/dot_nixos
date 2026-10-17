@@ -4,6 +4,7 @@
   environment.systemPackages = with pkgs; [
 
     firefox
+    qutebrowser
 
     mpv
     celluloid
@@ -29,6 +30,28 @@
     keepassxc
 
     calibre
+
+    git
+    tree
+    jq
+    mc
+
+    bitwarden
+
+    syncthing
+
+    yt-dlp
+
+    nmap
+    iotop
+    lshw
+    nvme-cli
+
+    android-tools
+
+    thunar
+    thunar-volman
+    thunar-archive-plugin
 
   ];
 }

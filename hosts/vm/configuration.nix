@@ -12,6 +12,10 @@
     ../../modules/autologin.nix
     ../../modules/boot.nix
   ];
+  
+  boot.initrd.luks.devices.cryptroot = {
+  device = "/dev/disk/by-partlabel/disk-main-luks";
+  };
 
   networking.hostName = "nixos-vm";
 

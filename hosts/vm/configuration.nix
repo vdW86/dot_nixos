@@ -2,6 +2,7 @@
 
 {
   imports = [
+    ../../disko/layouts/luks-btrfs.nix
     ../../modules/base.nix
     ../../modules/networking.nix
     ../../modules/bluetooth.nix

@@ -10,6 +10,7 @@
     ../../modules/hyprland.nix
     ../../modules/apps.nix
     ../../modules/autologin.nix
+    ../../modules/boot.nix
   ];
 
   networking.hostName = "nixos-vm";

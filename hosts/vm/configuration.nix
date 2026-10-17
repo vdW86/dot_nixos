@@ -1,7 +1,8 @@
-{ config, pkgs, ... }:
+{ config, pkgs, modulesPath, ... }:
 
 {
   imports = [
+  (modulesPath + "/profiles/qemu-guest.nix")
     ../../disko/layouts/luks-btrfs.nix
     ../../modules/base.nix
     ../../modules/networking.nix
@@ -12,7 +13,15 @@
     ../../modules/autologin.nix
     ../../modules/boot.nix
   ];
-  
+ 
+boot.initrd.availableKernelModules = [
+  "ahci"
+  "xhci_pci"
+  "virtio_pci"
+  "virtio_blk"
+  "sr_mod"
+];
+
   boot.initrd.luks.devices.cryptroot = {
   device = "/dev/disk/by-partlabel/disk-main-luks";
   };

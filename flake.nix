@@ -12,13 +12,15 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }: {
+  outputs = { self, nixpkgs, disko, home-manager, ... }: {
 
     nixosConfigurations.vm =
       nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
 
         modules = [
+          disko.nixosModules.disko
+
           ./hosts/vm/configuration.nix
 
           home-manager.nixosModules.home-manager

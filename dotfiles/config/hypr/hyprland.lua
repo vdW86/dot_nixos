@@ -46,8 +46,7 @@ hl.exec_cmd("/usr/libexec/polkit-gnome-authentication-agent-1")
 hl.exec_cmd("~/dotfiles/scripts/auto_lock.sh")
 hl.exec_cmd("dunst")
 hl.exec_cmd("nm-applet")
-hl.exec_cmd("/usr/libexec/polkit-gnome-authentication-agent-1")
-hl.exec_cmd("swaybg -i ~/Pictures/backgrounds/tiger1.jpg -m fill")
+hl.exec_cmd("swaybg -i ~/dotfiles/backgrounds/tiger1.jpg -m fill")
 end)
 -------------------------------
 ---- ENVIRONMENT VARIABLES ----

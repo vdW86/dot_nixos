@@ -1,5 +1,4 @@
 { ... }:
-
 {
   home.username = "kevin";
   home.homeDirectory = "/home/kevin";
@@ -13,6 +12,9 @@
       source ~/dotfiles/bash/bash_extra.sh
     '';
   };
+
+  home.file."dotfiles/bash".source =
+    ../dotfiles/bash;
 
   home.file.".config/fastfetch".source =
     ../dotfiles/fastfetch;

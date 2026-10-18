@@ -27,7 +27,7 @@
   },
 
   "custom/battery": {
-    "exec": "~/dotfiles/config/waybar/battery_status.sh",
+    "exec": "~/.config/waybar/battery_status.sh",
     "interval": 1,
   },
   

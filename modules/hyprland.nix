@@ -21,6 +21,10 @@
     swaylock
 
     waybar
+    
+    thunar
+    thunar-volman
+    thunar-archive-plugin
 
     xdg-desktop-portal-hyprland
   ];

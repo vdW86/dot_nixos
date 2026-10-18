@@ -6,9 +6,6 @@
     wl-clipboard
     p7zip
 
-    fastfetch
-    speedtest-cli
-
     brightnessctl
 
   ];

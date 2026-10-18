@@ -13,16 +13,19 @@
 
 
   home.file.".config/fastfetch".source =
-    ../dotfiles/fastfetch;
+    ../dotfiles/config/fastfetch;
 
   home.file.".config/foot".source =
-    ../dotfiles/foot;
+    ../dotfiles/config/foot;
 
   home.file.".config/dunst".source =
-    ../dotfiles/dunst;
+    ../dotfiles/config/dunst;
 
   home.file.".config/waybar".source =
-    ../dotfiles/waybar;
+    ../dotfiles/config/waybar;
+
+  home.file.".config/hypr/auto_lock.sh".source =
+    ../dotfiles/scripts/auto_lock.sh;
 
   home.stateVersion = "26.05";
 }

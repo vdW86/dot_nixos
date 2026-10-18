@@ -41,9 +41,9 @@
 ##############################################
   # Dotfiles structuur
 ##############################################
-#  home.file."dotfiles/scripts".source = ../dotfiles/scripts;
+  home.file."dotfiles/scripts".source = ../dotfiles/scripts;
 #  home.file."dotfiles/themes".source = ../dotfiles/themes;
-#  home.file."dotfiles/backgrounds".source = ../dotfiles/backgrounds;
+  home.file."dotfiles/backgrounds".source = ../dotfiles/backgrounds;
 ##############################################
   # Home Manager versie
 ##############################################

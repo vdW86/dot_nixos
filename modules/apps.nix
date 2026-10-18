@@ -4,7 +4,7 @@
   environment.systemPackages = with pkgs; [
     
     # Utilities
-    qalculator		# calculator
+#   qalculator		# calculator
     zathura			# A highly customizable and functional PDF viewer
     calibre			# an ebook library manager
     
@@ -25,7 +25,7 @@
 
     # Passwordmanagers
     keepassxc		# Qt5-based Password Manager 
-    bitwarden		# Password manager
+    bitwarden-desktop		# Password manager
     
     # Media
     cheese			# Webcam Booth for GNOME

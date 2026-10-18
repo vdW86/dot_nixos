@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 BATT_PATH="/sys/class/power_supply/BAT0"
 
 if [ -f "$BATT_PATH/capacity" ]; then

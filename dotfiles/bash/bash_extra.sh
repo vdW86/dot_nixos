@@ -22,8 +22,8 @@ esac
 export PATH="$HOME/dotfiles/scripts:$PATH"
 
 # Enable fastfetch when installed
-if [ -f /usr/bin/fastfetch ]; then
-	fastfetch
+if command -v fastfetch >/dev/null 2>&1; then
+    fastfetch
 fi
 
 # Enable autocd

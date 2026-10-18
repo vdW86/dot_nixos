@@ -13,7 +13,14 @@
 ##############################################
   # Bash configuratie
 ##############################################
-  programs.bash = {
+
+home.file."dotfiles/bash/bash_aliases.sh".source =
+  ../dotfiles/bash/bash_aliases.sh;
+
+home.file."dotfiles/bash/bash_extra.sh".source =
+  ../dotfiles/bash/bash_extra.sh;
+##############################################
+programs.bash = {
     enable = true;
 
     bashrcExtra = ''
@@ -49,7 +56,6 @@
   # Dotfiles structuur
 ##############################################
   home.file."dotfiles/scripts".source = ../dotfiles/scripts;
-  home.file."dotfiles/bash".source = ../dotfiles/bash;
   home.file."dotfiles/backgrounds".source = ../dotfiles/backgrounds;
 ##############################################
   # Home Manager versie

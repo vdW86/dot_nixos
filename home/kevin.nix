@@ -16,8 +16,15 @@
   programs.bash = {
     enable = true;
 
-    bashrcExtra = builtins.readFile ../dotfiles/bash/bash_extra.sh;
+    bashrcExtra = ''
+        [ -f "$HOME/dotfiles/bash/bash_aliases.sh" ] && \
+        source "$HOME/dotfiles/bash/bash_aliases.sh"
+
+        [ -f "$HOME/dotfiles/bash/bash_extra.sh" ] && \
+        source "$HOME/dotfiles/bash/bash_extra.sh"
+        '';
 };
+
 ##############################################
   # Configuratiebestanden uit dotfiles/config
 ##############################################
@@ -42,7 +49,7 @@
   # Dotfiles structuur
 ##############################################
   home.file."dotfiles/scripts".source = ../dotfiles/scripts;
-#  home.file."dotfiles/themes".source = ../dotfiles/themes;
+  home.file."dotfiles/bash".source = ../dotfiles/bash;
   home.file."dotfiles/backgrounds".source = ../dotfiles/backgrounds;
 ##############################################
   # Home Manager versie

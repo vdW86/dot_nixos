@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # Wifi-menu via Fuzzel + nmcli
 
 # Adapter check

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 dir="$HOME/Afbeeldingen/screenshot"
 mkdir -p "$dir"   # zorg dat map bestaat

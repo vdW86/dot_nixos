@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 echo "Beschikbare schijven:"
 lsblk -d -o NAME,SIZE,MODEL

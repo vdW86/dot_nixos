@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 chosen=$(printf "⏻  Uitzetten\n  Herstarten\n  Vergrendelen\n  Slaapstand" | \
 fuzzel --dmenu --prompt "Systeem")

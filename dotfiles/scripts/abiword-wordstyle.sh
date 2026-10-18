@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 TEMPLATE="$HOME/.config/abiword/templates/normal.awt"
 

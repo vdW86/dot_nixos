@@ -22,5 +22,8 @@
   home.file.".config/foot".source =
     ../dotfiles/foot;
 
+  home.file.".config/dunst".source =
+    ../dotfiles/dunst;
+
   home.stateVersion = "26.05";
 }

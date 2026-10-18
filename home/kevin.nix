@@ -25,5 +25,8 @@
   home.file.".config/dunst".source =
     ../dotfiles/dunst;
 
+  home.file.".config/waybar".source =
+    ../dotfiles/waybar;
+
   home.stateVersion = "26.05";
 }

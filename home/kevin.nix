@@ -34,21 +34,16 @@
     ../dotfiles/config/waybar;
 
   home.file.".config/hypr".source =
-    ../dotfiles/config/hyprland;
+    ../dotfiles/config/hypr;
 
   home.file.".config/swaylock".source =
     ../dotfiles/config/swaylock;
 ##############################################
   # Dotfiles structuur
 ##############################################
-  home.file."dotfiles/scripts".source =
-    ../dotfiles/scripts;
- 
-  home.file."dotfiles/themes".source =
-    ../dotfiles/themes;
- 
-  home.file."dotfiles/backgrounds".source =
-    ../dotfiles/backgrounds;
+  home.file."dotfiles/scripts".source = ../dotfiles/scripts;
+  home.file."dotfiles/themes".source = ../dotfiles/themes;
+  home.file."dotfiles/backgrounds".source = ../dotfiles/backgrounds;
 ##############################################
   # Home Manager versie
 ##############################################

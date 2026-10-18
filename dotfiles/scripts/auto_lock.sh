@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/bash
 # Lockscreen met vaste achtergrond
 
 # Zorg dat swaylock de juiste Wayland-display ziet
